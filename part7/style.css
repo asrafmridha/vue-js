@@ -6,3 +6,8 @@ button{
   padding: 5px 11px;
   margin: 5px;
 }
+.card{
+  height: 100px;
+  width: 100px;
+  border: 1px solid gray;
+}

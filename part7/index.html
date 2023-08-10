@@ -11,15 +11,22 @@
     <header>
       <h2>#Creating a Vue Application</h2>
     </header>
- 
+
     <div id="app">
+      <form @submit.prevent="handleFormSubmit">
         <h3>Enter Your Name</h3>
         <!-- <input type="text" @keyup="handlekeyup"> -->
-        <input type="text" @keyup.enter="handlekeyup">
+        <input type="text" @keyup="handlekeyup" />
         <p>Welcome {{ name }}</p>
-    </div>
-    
+        <button type="submit">ok</button>
+      </form>
+      <div class="card" @click="handleCardEvent">
+        <button @click.stop="handleCardViewEvent">View</button>
+      </div>  <!-- click event div --> 
+      <!-- <div class="card" @click.right="handCardEvent"></div> -->  <!--click right event div -->
+      <!-- <div class="card" @click.left="handCardEvent"></div> -->  <!--click left event div -->
 
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
