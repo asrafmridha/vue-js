@@ -11,16 +11,12 @@
     <header>
       <h2>#Creating a Vue Application</h2>
     </header>
-
     <div id="app">
-      <h3>
-        Welcome to {{ tutorialInfo.name }}
-        <p>Get the Source Code at</p>
-        <a v-bind:href="tutorialInfo.githubLink">Github</a>
-      </h3>
-      <br />
-      <p v-html='htmlCode'></p>
+      <h3>Time : {{ getCurrentTime() }}</h3>
     </div>
+
+
+    
 
     <script src="app.js"></script>
   </body>
