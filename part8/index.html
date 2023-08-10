@@ -14,7 +14,7 @@
 
     <div id="app">
       <h3>Enter a Number</h3>
-      <input :value="number" type="text" @input="handleInput"/>
+      <input v-model="number"/>
       <br />
       <button @click="getDouble">Get Double</button>
       <button @click="getSquare">Get Square</button>

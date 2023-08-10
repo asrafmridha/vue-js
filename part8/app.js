@@ -6,9 +6,6 @@ var app = Vue.createApp({
     };
   },
   methods: {
-    handleInput(e) {
-      this.number = e.target.value;
-    },
     getDouble() {
       this.result = this.number * 2;
     },
