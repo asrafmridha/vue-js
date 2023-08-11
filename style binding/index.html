@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Js 3</title>
+    <script src="../vue.global.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>#Creating a Vue Application</h2>
+    </header>
+
+    <div id="app">
+      <input type="text" v-model="bgColor"> <br>
+      <input type="text" v-model="textColor">
+           <input type="color" v-model="bgColor">
+      <div class="card" :style="{ backgroundColor :bgColor, color: textColor}">card</div>
+ 
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
