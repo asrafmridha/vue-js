@@ -2,6 +2,10 @@ var app = Vue.createApp({
   data() {
     return {
       mobile: "",
+      name: {
+        firstName: "",
+        lastName: "",
+      },
     };
   },
   watch: {
@@ -12,9 +16,21 @@ var app = Vue.createApp({
         this.mobile = oldValue;
       }
       if (newValue.length == 11) {
-        alert('An Otp Has been Sent');
+        alert("An Otp Has been Sent");
       }
     },
+    // "name.firstName": function (newValue, oldValue) {
+    //   console.log(newValue);
+    // },
+    // "name.lastName": function (newValue, oldValue) {
+    //   console.log(newValue);
+    // },
+    name: {
+      deep: true,
+      handler: function (newValue) {
+        console.log(newValue);
+      }
+    }
   },
 });
 
