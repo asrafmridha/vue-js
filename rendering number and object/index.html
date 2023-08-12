@@ -13,13 +13,19 @@
     </header>
 
     <div id="app">
-      <input type="text" v-model="newSkill" />
-      <button @click="addNewSkill">Add Skill</button>
-      <ul v-for="(skill ,i) in skills">
-        <li @click="removeSkill(i)">
-          {{ i+1 }} . {{ skill }} <button>Remove</button>
-        </li>
-      </ul>
+      <h3>About Me</h3>
+      <table>
+        <tr v-for="( value ,key,index ) in aboutMe">
+          <th>{{ index+1 }} .</th>
+          <th>{{ key }}</th>
+           <td>{{ value }}</td>
+        </tr>
+      </table>
+      <div>
+        <p v-for="i in 9">
+            {{ i }}
+        </p>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
