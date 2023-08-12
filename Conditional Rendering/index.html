@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Js 3</title>
+    <script src="../vue.global.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>#Creating a Vue Application</h2>
+    </header>
+
+    <div id="app">
+      <button @click="toggle">Show / Hide</button>
+      <div class="card" v-if="show"></div>
+      <ul>
+        <li v-for="(skill,index) in skills">
+          {{ index+1 }}. {{ skill.name }}
+          <template v-if="(skill.experience>2)"> (Beginner) </template>
+          <template v-else> (Advance) </template>
+          <!--({{ skill.experience }})-->
+        </li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
