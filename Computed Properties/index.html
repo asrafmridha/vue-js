@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Js 3</title>
+    <script src="../vue.global.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>#Creating a Vue Application</h2>
+    </header>
+
+    <div id="app">
+      <input type="text" v-model="review" />
+      <ul>
+        <li
+          v-for="(skill,index) in skills"
+          :key="skill.name"
+          @click="removeSkill(index)"
+        >
+          {{ index+1 }}. {{ skill.name }}- {{ skill.experience }}
+        </li>
+      </ul>
+      <h3>Total :{{ totalCount1 }}</h3>
+      <h3>Experience Skill</h3>
+      <ul>
+        <li
+          v-for="(skill,index) in experiencedSkills"
+          :key="skill.name"
+          @click="removeSkill(index)"
+        >
+          {{ index+1 }}. {{ skill.name }}- {{ skill.experience }}
+        </li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
