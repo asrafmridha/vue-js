@@ -9,10 +9,20 @@
 
 <script>
 export default {
-   props:['name','address','website'],
+   props:{
+      name:String,
+      website :{
+         type :String,
+         required:false,
+         default:"youtube.com"
+      },
+      address:{
+         type :String,
+         required:true,
+      }
+   },
  data(){
   return{
-     
   }
  }
 }
@@ -22,7 +32,6 @@ export default {
 .contact-details{
    border : 1px solid gray;
    margin :11px 22px;
-   padding :22px;
-   
+   padding :22px; 
 }
 </style>
